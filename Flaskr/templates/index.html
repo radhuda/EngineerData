@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+    {% block content %}
+   <div class="zinc-container" style="overflow: auto; max-height: 80vh">
+            <div class="table-responsive">
+                <table class="table" id="zinc">
+                    <thead>
+                        <tr>
+                            <th scope="col">Flight</th>
+                            <th scope="col">Destination</th>
+                            <th scope="col">Check in</th>
+                            <th scope="col">Depature</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for x in zinc %}
+                        <tr id={{ zinc.smiles }}>
+                            <th scope="row">{{ x.smiles }}</th>
+                            <td> {{x.smiles}} </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    {% endblock %}
