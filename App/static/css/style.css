@@ -1,0 +1,52 @@
+
+#particles-js {
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    background-color: #000022;
+    background-image: url('');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+table{
+    color: azure;
+
+}
+
+#smiles_input {
+ position: relative;
+ max-width: 400px;
+ margin: 150px auto 0;
+}
+
+#smiles_input {
+ border: 0;
+ border-bottom: 2px solid #1976D2;
+ width: 100%;
+ font-size: 30px;
+ line-height: 35px;
+ height: 70px;
+ text-align: center;
+ padding: 10px;
+ background: transparent;
+	color: #BBDEFB;
+}
+
+#smiles_input input.shake {
+ animation-name: shaker;
+ animation-duration: 200ms;
+ animation-timing-function: ease-in-out;
+ animation-delay: 0s;
+}
+
+#smiles_input input:focus {
+ outline: 0;
+	color: #BBDEFB;
+}
+
+#smiles_input input::placeholder {
+ color: #1976D2;
+}
+

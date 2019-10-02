@@ -11,4 +11,4 @@ class Zinc(Base):
 
 
     def __repr__(self):
-        return '<_c0 %r>' % (self.flight)
+        return '<Zinc %r>' % (self.smiles)

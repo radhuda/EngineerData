@@ -15,15 +15,15 @@
 	particlesJS.load('particles-js', "{{url_for('static', filename='particles.json')}}", function() {
 	console.log('callback - particles.js config loaded');});
 	</script>
-    <form method="POST">
-      <input>
-      <button>send my greetings!</button>
-    </form>
     <div class="container h-100">
             <div class="row align-items-center h-100">
                 <div class="col-md-8 col-sm-12 mx-auto">
                     <div class="h-100 justify-content-center">
-                        {% block content %}  {% endblock %}
+                        {% for x in zinc %}
+                          <tr>
+                            <td>{{x}}</td>
+                          </tr>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
