@@ -1,33 +1,20 @@
-{% extends 'base.html' %}
-
-    {% block content %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+    <script type="text/javascript" src="../static/js/JSmol.min.js"></script>
+    <script type="text/javascript">
+    var Info = {
+      width: 300,
+      height: 300,
+      j2sPath: "../static/j2s",
+    }
+    </script>
 </head>
 <body>
-<div class="zinc-container" style="overflow: auto; max-height: 80vh">
-            <div class="table-responsive">
-                <table style="color: aliceblue" class="table" id="zinc">
-                    <thead>
-                        <tr>
-                            <th scope="col">Smiles</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    {% for x in zinc %}
-                        <tr id={{ zinc.smiles }}>
-                            <th scope="row">{{ x.smiles }}</th>
-                            <td> {{x.smiles}} </td>
-                        </tr>
-                    {% endfor %}
-                    </tbody>
-                </table>
-            </div>
-        </div>
+
+
 </body>
 </html>
-    {% endblock %}

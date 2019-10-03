@@ -1,13 +1,14 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <title>ZINC Database</title>
-
     <link rel="stylesheet" media="screen" href="{{ url_for('static',filename='css/style.css') }}">
     <script type="text/javascript"></script>
   </head>
   <body bgcolor="black">
+  <section>
     <div id="particles-js" ></div>
     <script type="text/javascript" src="{{url_for('static', filename='particles.js')}}"></script>
     <script type="text/javascript" src="{{url_for('static', filename='js/app.js')}}"></script>
@@ -15,17 +16,13 @@
 	particlesJS.load('particles-js', "{{url_for('static', filename='particles.json')}}", function() {
 	console.log('callback - particles.js config loaded');});
 	</script>
-    <div class="container h-100">
-            <div class="row align-items-center h-100">
-                <div class="col-md-8 col-sm-12 mx-auto">
-                    <div class="h-100 justify-content-center">
-                        {% for x in zinc %}
-                          <tr>
-                            <td>{{x}}</td>
-                          </tr>
-                        {% endfor %}
-                    </div>
-                </div>
-            </div>
+  </section>
+  <section>
+    {% extends "zinc.html" %}
+    {% block body %}
+      ...// write your code here
+    {% endblock %}
+  </section>
+
   </body>
 </html>
