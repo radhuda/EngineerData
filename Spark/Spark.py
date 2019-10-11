@@ -1,13 +1,39 @@
-import boto3
+# Import Modules
 import pyspark
 from pyspark.sql import SparkSession
-
-s3 = boto3.resource('s3')
-
-s3.Bucket('zincdata').download_file('tranches/AA/AAHL/AAAAHL.xaa.db2', 'file.db2')
+from pyspark.sql.types import IntegerType, StringType
+import pyspark.sql.functions as F
+from db_config import url, properties
 
 spark = SparkSession.builder.getOrCreate()
 
-df = spark.read.option('header','true').format('csv').option('delimiter', '\t').load('file.db2')
 
-df.show()
+# Defined multiple UDF via PySpark Sql appfunctions.py module
+def filename(path):
+    return path
+countCarbons = F.udf(lambda x : str(x).lower().count('c'), IntegerType())
+countNitrogens = F.udf(lambda x : str(x).lower().count('n'), IntegerType())
+countOxygens = F.udf(lambda x : str(x).lower().count('o'), IntegerType())
+sourceFile = F.udf(filename, StringType())
+
+# Created DataFrames here with the new columns that I required and dropped the duplicates
+df = spark.read.format('csv').option('delimiter','\t').option('header', 'true')\
+    .load('s3a://zincdata/zinc/*/*.txt')
+df = df.withColumn('carbons', countCarbons('smiles'))
+df = df.withColumn('nitrogens', countNitrogens('smiles'))
+df = df.withColumn('oxygens', countOxygens('smiles'))
+df = df.withColumn('filename', sourceFile(F.input_file_name()))
+df = df.dropDuplicates(['smiles'])
+
+# Performed my dataframe write with the help of jdbc
+df.write.jdbc(url='jdbc:%s' % url, table="zinc", mode='append', properties=properties)
+
+
+
+
+
+
+
+
+
+
