@@ -14,7 +14,7 @@ return true;
 }if (this.line.startsWith ("  Atomic charges from electrostatic potential:")) {
 this.readCharges ();
 return true;
-}if (this.line.startsWith ("  number of basis functions....")) {
+}if (this.line.startsWith ("  number of basis appfunctions.py....")) {
 this.moCount = this.parseIntAt (this.line, 32);
 return true;
 }if (this.line.startsWith ("  basis set:")) {

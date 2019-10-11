@@ -52,7 +52,7 @@ function (labels) {
 labels.put ("help", J.i18n.GT.$ ("&Help"));
 labels.put ("search", J.i18n.GT.$ ("&Search..."));
 labels.put ("commands", J.i18n.GT.$ ("&Commands"));
-labels.put ("functions", J.i18n.GT.$ ("Math &Functions"));
+labels.put ("appfunctions.py", J.i18n.GT.$ ("Math &Functions"));
 labels.put ("parameters", J.i18n.GT.$ ("Set &Parameters"));
 labels.put ("more", J.i18n.GT.$ ("&More"));
 labels.put ("Editor", J.i18n.GT.$ ("Editor"));

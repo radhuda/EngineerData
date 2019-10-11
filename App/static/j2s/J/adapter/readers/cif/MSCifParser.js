@@ -29,7 +29,7 @@ var cr = this.cr;
 var key = cr.key;
 if (key.equals ("_cell_subsystem_code")) return this.processSubsystemLoopBlock ();
 if (!key.startsWith ("_cell_wave") && !key.contains ("fourier") && !key.contains ("legendre") && !key.contains ("_special_func")) {
-if (key.contains ("crenel_ortho")) cr.appendLoadNote ("WARNING: Orthogonalized non-Legendre functions not supported.\nThe following block has been ignored. Use Legendre functions instead.\n\n" + cr.parser.skipLoop (true) + "=================================\n");
+if (key.contains ("crenel_ortho")) cr.appendLoadNote ("WARNING: Orthogonalized non-Legendre appfunctions.py not supported.\nThe following block has been ignored. Use Legendre appfunctions.py instead.\n\n" + cr.parser.skipLoop (true) + "=================================\n");
 return 0;
 }if (cr.asc.iSet < 0) cr.asc.newAtomSet ();
 cr.parseLoopParametersFor ("_atom_site", J.adapter.readers.cif.MSCifParser.modulationFields);

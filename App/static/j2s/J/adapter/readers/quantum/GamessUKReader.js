@@ -13,7 +13,7 @@ return true;
 }if (this.line.indexOf ("$CONTRL OPTIONS") >= 0) {
 this.readControlInfo ();
 return true;
-}if (this.line.indexOf ("contracted primitive functions") >= 0) {
+}if (this.line.indexOf ("contracted primitive appfunctions.py") >= 0) {
 this.readGaussianBasis ("======================================================", "======");
 return false;
 }if (this.line.indexOf ("molecular geometry") >= 0) {

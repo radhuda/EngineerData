@@ -1,4 +1,4 @@
-// JmolApi.js -- Jmol user functions  Bob Hanson hansonr@stolaf.edu
+// JmolApi.js -- Jmol user appfunctions.py  Bob Hanson hansonr@stolaf.edu
 
 // BH 1/19/2017 8:05:05 AM <br>
 // BH 4/1/2016 12:59:45 PM fix applet_or_identifier reference in Jmol.getChemicalInfo
@@ -240,7 +240,7 @@
 		alert(msg);
 	}
 
-//////////// console functions /////////////
+//////////// console appfunctions.py /////////////
 
 	Jmol.clearConsole = function(applet) {
 		applet._clearConsole();

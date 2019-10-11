@@ -4,25 +4,29 @@
   <head>
     <meta charset="utf-8">
     <title>ZINC Database</title>
-    <link rel="stylesheet" media="screen" href="{{ url_for('static',filename='css/style.css') }}">
-    <script type="text/javascript"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <script type="text/javascript" src="{{url_for('static', filename='js/app.js')}}"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='js/custom.js')}}"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='js/smoothscroll.js')}}"></script>
   </head>
   <body bgcolor="black">
-  <section>
-    <div id="particles-js" ></div>
+  <!-- Home start -->
+    <section id='home' class="pfblock-image screen-height">
+      <div id="particles-js" >
+
+        <div class="intro">
+        <h1>ZINC DATABASE</h1>
     <script type="text/javascript" src="{{url_for('static', filename='particles.js')}}"></script>
-    <script type="text/javascript" src="{{url_for('static', filename='js/app.js')}}"></script>
     <script>
-	particlesJS.load('particles-js', "{{url_for('static', filename='particles.json')}}", function() {
-	console.log('callback - particles.js config loaded');});
-	</script>
-  </section>
-  <section>
-    {% extends "zinc.html" %}
-    {% block body %}
-      ...// write your code here
-    {% endblock %}
-  </section>
+        particlesJS.load('particles-js', "{{url_for('static', filename='particles.json')}}", function() {
+        console.log('callback - particles.js config loaded');});
+    </script>
+
+    <!-- Home end -->
+     {% extends "zinc.html" %}
+      {% block body %}
+        ...// write your code here
+      {% endblock %}
 
   </body>
 </html>

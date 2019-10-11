@@ -182,7 +182,7 @@ var pJS = function(tag_id, params){
 
 
 
-  /* ---------- pJS functions - canvas ------------ */
+  /* ---------- pJS appfunctions.py - canvas ------------ */
 
   pJS.fn.canvasInit = function(){
     pJS.canvas.ctx = pJS.canvas.el.getContext('2d');
@@ -236,7 +236,7 @@ var pJS = function(tag_id, params){
   };
 
 
-  /* --------- pJS functions - particles ----------- */
+  /* --------- pJS appfunctions.py - particles ----------- */
 
   pJS.fn.particle = function(color, opacity, position){
 
@@ -671,7 +671,7 @@ var pJS = function(tag_id, params){
   };
 
 
-  /* ---------- pJS functions - particles interaction ------------ */
+  /* ---------- pJS appfunctions.py - particles interaction ------------ */
 
   pJS.fn.interact.linkParticles = function(p1, p2){
 
@@ -748,7 +748,7 @@ var pJS = function(tag_id, params){
   }
 
 
-  /* ---------- pJS functions - modes events ------------ */
+  /* ---------- pJS appfunctions.py - modes events ------------ */
 
   pJS.fn.modes.pushParticles = function(nb, pos){
 
@@ -1057,7 +1057,7 @@ var pJS = function(tag_id, params){
 
 
 
-  /* ---------- pJS functions - vendors ------------ */
+  /* ---------- pJS appfunctions.py - vendors ------------ */
 
   pJS.fn.vendors.eventsListeners = function(){
 
@@ -1411,7 +1411,7 @@ var pJS = function(tag_id, params){
 
 };
 
-/* ---------- global functions - vendors ------------ */
+/* ---------- global appfunctions.py - vendors ------------ */
 
 Object.deepExtend = function(destination, source) {
   for (var property in source) {
@@ -1470,7 +1470,7 @@ function isInArray(value, array) {
 }
 
 
-/* ---------- particles.js functions - start ------------ */
+/* ---------- particles.js appfunctions.py - start ------------ */
 
 window.pJSDom = [];
 

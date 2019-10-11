@@ -72,7 +72,7 @@ function (eventId, index1, index2, adjusting) {
 var pt = eventId.lastIndexOf ("/");
 var dialog = eventId.substring (0, pt);
 var selector = eventId.substring (pt + 1);
-var msg = "&selector=" + selector + "&index=" + index1 + (index2 < 0 ? "&adjusting=" + adjusting : "&index2=" + index2);
+var msg = "&selector=" + selector + "&index=" + index1 + (index2 < 0 ? "&adjusting=" + adjusting : "&new.html=" + index2);
 this.dialogCallback (dialog, "tableSelect", msg);
 }, "~S,~N,~N,~B");
 Clazz.defineMethod (c$, "processWindowClosing", 

@@ -168,7 +168,7 @@
 
 	/*  AngelH, mar2007:
 		By (re)setting these variables in the webpage before calling Jmol.getApplet(),
-		a custom message can be provided (e.g. localized for user's language) when no Java is installed.
+		a custom.js message can be provided (e.g. localized for user's language) when no Java is installed.
 	*/
 	Applet._noJavaMsg =
 			"Either you do not have Java applets enabled in your web<br />browser or your browser is blocking this applet.<br />\
@@ -580,7 +580,7 @@
 		//  Special case: an empty value for width or height is accepted, meaning no change in that dimension.
 
 		/*
-		 * private functions
+		 * private appfunctions.py
 		 */
 		function _getAppletSize(size, units) {
 			/* Accepts single number, 2-value array, or object with width and height as mroperties, each one can be one of:

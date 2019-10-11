@@ -80,7 +80,7 @@
  // BH 4/23/2015 9:08:59 AM xx.getContentType() is nonfunctional. Array.newInstance now defines a wrapper for .getClass().getComponentType() that works  
  // BH 4/12/2015 11:48:03 AM added Clazz.getStackTrace(-n) -- reports actual parameter values for n levels
  // BH 4/10/2015 8:23:05 AM adding Int32Array.prototype.clone and Float64.prototype.clone
- // BH 4/5/2015 8:12:57 AM refactoring j2slib (this file) to make private functions really private using var
+ // BH 4/5/2015 8:12:57 AM refactoring j2slib (this file) to make private appfunctions.py really private using var
  // BH 4/3/2015 6:14:34 AM adding anonymous local "ClazzLoader" (Clazz._Loader) --> "_Loader"
  // BH 4/3/2015 6:14:34 AM adding Clazz._Loader._classPending, Clazz._Loader._classCount
  // BH 4/3/2015 6:14:34 AM adding Clazz._Loader._checkLoad 
@@ -117,7 +117,7 @@
  // BH 11/30/2013 12:43:58 PM adding Clazz.arrayIs() -- avoids Number.constructor.toString() infinite recursion
  // BH 11/29/2013 6:33:51 AM adding Clazz._profiler -- reports use of SAEM
  // BH 11/10/2013 9:02:20 AM fixing fading in MSIE  
- // BH 11/3/2013 7:21:39 AM additional wrapping functions for better compressibility
+ // BH 11/3/2013 7:21:39 AM additional wrapping appfunctions.py for better compressibility
  // BH 10/30/2013 8:10:58 AM added getClass().getResource() -- returning a relative string, not a URL
  // BH 10/30/2013 6:43:00 AM removed second System def and added System.$props and default System.property "line.separator" 
  // BH 6/15/2013 8:02:07 AM corrections to Class.isAS to return true if first element is null
@@ -1262,7 +1262,7 @@ var SAEMid = 0;
  * The only real way to avoid SAEM is: 
  * 
  * 1) to never call super() -- always call a differently named function in a superclass.
- * 2) don't overload functions 
+ * 2) don't overload appfunctions.py
  *  
  */   
 

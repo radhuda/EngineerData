@@ -7525,8 +7525,8 @@ this.qm_moNumber = (linearCombination == null ? Math.abs (iMo) : Clazz_floatToIn
 this.qmOrbitalType = (this.moData.containsKey ("haveVolumeData") ? 5 : this.moData.containsKey ("gaussians") ? 1 : this.moData.containsKey ("slaters") ? 2 : 0);
 var isElectronDensity = (iMo <= 0 && linearCombination == null);
 if (this.qmOrbitalType == 0) {
-JU.Logger.error ("MO ERROR: No basis functions found in file for MO calculation. (GAUSSIAN 'gfprint' keyword may be missing?)");
-this.title =  Clazz_newArray (-1, ["no basis functions found in file"]);
+JU.Logger.error ("MO ERROR: No basis appfunctions.py found in file for MO calculation. (GAUSSIAN 'gfprint' keyword may be missing?)");
+this.title =  Clazz_newArray (-1, ["no basis appfunctions.py found in file"]);
 } else {
 var mos = this.moData.get ("mos");
 this.qmOrbitalCount = mos.size ();

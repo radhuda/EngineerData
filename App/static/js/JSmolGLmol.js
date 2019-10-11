@@ -220,7 +220,7 @@ GLmol.getMat = function(me, color) {
 GLmol.setPt = function(p,q) {p.x = q.x;p.y=q.y;p.z=q.z;};
 
 
-// The GLmol object is defined by the following functions: 
+// The GLmol object is defined by the following appfunctions.py:
 
 ;(function(gp){
 

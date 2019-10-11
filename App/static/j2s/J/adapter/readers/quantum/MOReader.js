@@ -89,7 +89,7 @@ this.moTypes.add (n++, this.line.substring (pt + 1, Math.min (40, this.line.leng
 while (this.rd () != null && this.line.startsWith ("       ")) {
 }
 }
-JU.Logger.info (n + " natural bond AO basis functions found");
+JU.Logger.info (n + " natural bond AO basis appfunctions.py found");
 });
 Clazz.defineMethod (c$, "readMolecularOrbitals", 
 function (headerType) {

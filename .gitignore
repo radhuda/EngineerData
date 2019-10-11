@@ -10,3 +10,5 @@ build/
 *.egg-info/
 db_properties.ini
 Spark/db_config.py
+App/static
+App/templates

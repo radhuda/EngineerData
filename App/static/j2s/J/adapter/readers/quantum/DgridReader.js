@@ -93,7 +93,7 @@ cData.append (this.line);
 }
 var list =  Clazz.newFloatArray (this.slaters.size (), 0);
 tokens = JU.PT.getTokens (cData.toString ());
-if (tokens.length != nFuncs) JU.Logger.error ("DgridReader: number of coefficients (" + tokens.length + ") does not equal number of functions (" + nFuncs + ")");
+if (tokens.length != nFuncs) JU.Logger.error ("DgridReader: number of coefficients (" + tokens.length + ") does not equal number of appfunctions.py (" + nFuncs + ")");
 for (var i = 0; i < tokens.length; i++) {
 var pt = ptSlater[i];
 list[pt] = this.parseFloatStr (tokens[i]);

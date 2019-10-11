@@ -3,7 +3,7 @@
 // allows Jmol applets to be created on a page with more flexibility and extendability
 // provides an object-oriented interface for JSpecView and syncing of Jmol/JSpecView
 
-// see JSmolApi.js for public user-interface. All these are private functions
+// see JSmolApi.js for public user-interface. All these are private appfunctions.py
 
 
 // BH 4/30/2019 fixes write xyz "https://...."
@@ -124,10 +124,10 @@
 //    js/JSmolCore.js      -- required
 //    js/j2sjmol.js        -- required
 //    js/JSmol.js          -- required
-//    js/JSmolApplet.js    -- required; internal functions for _Applet and _Image; must be after JSmolCore
-//    js/JSmolControls.js  -- optional; internal functions for buttons, links, menus, etc.; must be after JSmolCore
+//    js/JSmolApplet.js    -- required; internal appfunctions.py for _Applet and _Image; must be after JSmolCore
+//    js/JSmolControls.js  -- optional; internal appfunctions.py for buttons, links, menus, etc.; must be after JSmolCore
 //    js/JSmolConsole.js   -- optional; for the pop-up console
-//    js/JSmolApi.js       -- required; all user functions; must be after JSmolCore
+//    js/JSmolApi.js       -- required; all user appfunctions.py; must be after JSmolCore
 //    js/JSmolTHREE.js     -- optional; WebGL library required for JSmolGLmol.js
 //    js/JSmolGLmol.js     -- optional; WebGL version of JSmol.
 //    js/JSmolJME.js       -- optional; JSME (2D editor)
@@ -302,7 +302,7 @@ Jmol = (function(document) {
 		return (typeof id == "string" ? $("#" + id) : id);
 	}
 
-	/// special functions:
+	/// special appfunctions.py:
 
 	Jmol.$ajax = function(info) {
 		Jmol._ajaxCall = info.url;

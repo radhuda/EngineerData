@@ -13,7 +13,7 @@
 //                           immediately focused and not using jQuery for adding the applet and having  
 //                           multiple applets.
 // BH 12/6/2013 10:12:30 AM adding corejmoljsv.z.js
-// BH 9/17/2013 10:18:40 AM  file transfer functions moved to JSmolCore 
+// BH 9/17/2013 10:18:40 AM  file transfer appfunctions.py moved to JSmolCore
 // BH 3/5/2013 9:54:16 PM added support for a cover image: Info.coverImage, coverScript, coverTitle, deferApplet, deferUncover
 // BH 1/3/2013 4:54:01 AM mouse binding should return false -- see d.bind(...), and d.bind("contextmenu") is not necessary
 

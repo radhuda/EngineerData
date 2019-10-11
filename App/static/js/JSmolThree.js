@@ -5148,7 +5148,7 @@ THREE.MultiplyBlending = 4;
 THREE.AdditiveAlphaBlending = 5;
 THREE.CustomBlending = 6;
 
-// custom blending equations
+// custom.js blending equations
 // (numbers start from 100 not to clash with other
 //  mappings to OpenGL constants defined in Texture.js)
 
@@ -5156,7 +5156,7 @@ THREE.AddEquation = 100;
 THREE.SubtractEquation = 101;
 THREE.ReverseSubtractEquation = 102;
 
-// custom blending destination factors
+// custom.js blending destination factors
 
 THREE.ZeroFactor = 200;
 THREE.OneFactor = 201;
@@ -5167,7 +5167,7 @@ THREE.OneMinusSrcAlphaFactor = 205;
 THREE.DstAlphaFactor = 206;
 THREE.OneMinusDstAlphaFactor = 207;
 
-// custom blending source factors
+// custom.js blending source factors
 
 //THREE.ZeroFactor = 200;
 //THREE.OneFactor = 201;
@@ -8210,7 +8210,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 	this.autoScaleCubemaps = true;
 
-	// custom render plugins
+	// custom.js render plugins
 
 	this.renderPluginsPre = [];
 	this.renderPluginsPost = [];
@@ -8528,7 +8528,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 	};
 
-	// Internal functions
+	// Internal appfunctions.py
 
 	// Buffer allocation
 
@@ -8874,7 +8874,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 		geometryGroup.__webglLineCount = nlines * 2;
 
 
-		// custom attributes
+		// custom.js attributes
 
 		if ( material.attributes ) {
 
@@ -11167,9 +11167,9 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 		if ( updateBuffers ) {
 
-			// custom attributes
+			// custom.js attributes
 
-			// Use the per-geometryGroup custom attribute arrays which are setup in initMeshBuffers
+			// Use the per-geometryGroup custom.js attribute arrays which are setup in initMeshBuffers
 
 			if ( geometryGroup.__webglCustomAttributesList ) {
 
@@ -11486,7 +11486,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 		if ( this.autoUpdateObjects ) this.initWebGLObjects( scene );
 
-		// custom render plugins (pre pass)
+		// custom.js render plugins (pre pass)
 
 		renderPlugins( this.renderPluginsPre, scene, camera );
 
@@ -11612,7 +11612,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 		}
 
-		// custom render plugins (post pass)
+		// custom.js render plugins (post pass)
 
 		renderPlugins( this.renderPluginsPost, scene, camera );
 
@@ -12269,7 +12269,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 	};
 
-	// Objects updates - custom attributes check
+	// Objects updates - custom.js attributes check
 
 	function areCustomAttributesDirty ( material ) {
 
